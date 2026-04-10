@@ -564,9 +564,10 @@
   <a href="https://t.me/my_lunara_bot" class="btn-gold reveal">Попробовать бесплатно</a>
 </div>
 
-<footer>© 2025 Лунара · <a href="https://t.me/my_lunara_bot">Telegram</a></footer>
+<footer>© <span id="year"></span> Лунара · <a href="https://t.me/my_lunara_bot">Telegram</a></footer>
 
 <script>
+  document.getElementById('year').textContent = new Date().getFullYear();
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
