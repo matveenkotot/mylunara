@@ -407,9 +407,43 @@
 
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
+    .screens-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 0.5rem;
+      justify-items: center;
+    }
+
+    .screen-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      width: 100%;
+    }
+
+    .screen-img {
+      width: 100%;
+      max-width: 240px;
+      border-radius: 18px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,169,110,0.15);
+      display: block;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+
+    .screen-caption {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
     @media (max-width: 680px) {
       .wrap { padding: 2.5rem 1.25rem; }
       .why-grid { grid-template-columns: 1fr; }
+      .screens-row { grid-template-columns: 1fr; gap: 2rem; }
+      .screen-img { max-width: 85vw; }
       body { overflow-x: hidden; }
     }
   </style>
@@ -496,7 +530,7 @@
       <span class="list-row-icon">✕</span>
       <div>
         <p style="font-size: 0.8rem; color: var(--muted); margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.08em;">Гороскоп</p>
-        <p style="font-size: 1rem; line-height: 1.5;">Один на миллион Скорпионов, причём тут ты</p>
+        <p style="font-size: 1rem; line-height: 1.5;">Один на миллион Скорпионов, при чём тут ты</p>
       </div>
     </div>
     <div class="list-row">
@@ -545,7 +579,7 @@
   <div class="list-card reveal">
     <div class="list-row">
       <span class="list-row-icon">✦</span>
-      <p>Персональный совет под твою натальную карту — не под знак зодиака</p>
+      <p>Ответы, в которых узнаёшь себя — не общие гороскопы, а разбор именно твоей ситуации</p>
     </div>
     <div class="list-row">
       <span class="list-row-icon">✦</span>
@@ -553,10 +587,58 @@
     </div>
     <div class="list-row">
       <span class="list-row-icon">✦</span>
-      <p>Ответ в любое время — без записи и очереди</p>
+      <p>Сохранённый контекст — возвращаешься к разбору когда нужно, не начиная с нуля</p>
     </div>
   </div>
 </div>
+
+<div class="sep"></div>
+
+<div class="wrap">
+  <h2 class="section-h reveal">Можно не просто спросить — а разобрать ситуацию глубже</h2>
+
+  <div class="list-card reveal">
+    <div class="list-row">
+      <span class="list-row-icon">💕</span>
+      <p><strong>Совместимость</strong><br>
+      Почему вас тянет друг к другу, где напряжение и что из этого может получиться</p>
+    </div>
+
+    <div class="list-row">
+      <span class="list-row-icon">💰</span>
+      <p><strong>Финансовый период</strong><br>
+      Когда лучше действовать, где возможности и где риски потерять деньги</p>
+    </div>
+
+    <div class="list-row">
+      <span class="list-row-icon">📅</span>
+      <p><strong>Лучшие даты</strong><br>
+      Конкретные дни для встреч, решений и сделок — с объяснением почему</p>
+    </div>
+  </div>
+</div>
+
+<div class="sep"></div>
+
+<div class="wrap">
+  <h2 class="section-h reveal">Как это выглядит в диалоге</h2>
+
+  <div class="screens-row reveal">
+    <div class="screen-wrap">
+      <img src="screen1.png" alt="Начало разбора" class="screen-img">
+      <p class="screen-caption">Начало — дата рождения</p>
+    </div>
+    <div class="screen-wrap">
+      <img src="screen2.png" alt="Разбор ситуации" class="screen-img">
+      <p class="screen-caption">Разбор ситуации</p>
+    </div>
+    <div class="screen-wrap">
+      <img src="screen3.png" alt="Совместимость по картам" class="screen-img">
+      <p class="screen-caption">Совместимость по картам</p>
+    </div>
+  </div>
+</div>
+
 
 <div class="final">
   <p class="final-title reveal">Твой астролог для важных решений</p>
